@@ -54,13 +54,13 @@ Representa o nível de Nitrogênio no solo.
 - Pressionado = nutriente adequado
 - Não pressionado = nutriente inadequado
 
-### Botão P (amarelo)
+### Botão P (verde)
 Representa o nível de Fósforo no solo.
 
 - Pressionado = nutriente adequado
 - Não pressionado = nutriente inadequado
 
-### Botão K (vermelho)
+### Botão K (verde)
 Representa o nível de Potássio no solo.
 
 - Pressionado = nutriente adequado
@@ -70,6 +70,9 @@ Representa o nível de Potássio no solo.
 O solo será considerado com condição nutricional mínima adequada quando pelo menos dois dos três nutrientes monitorados, N, P e K, estiverem adequados.
 
 ### LDR
+> Na falta de luz, sua resistencia **aumenta**
+> Na presença da luz, sua resistência **cai**
+
 Representa o pH do solo de forma simulada. Sua leitura analógica será convertida para uma escala de 0 a 14, correspondente à escala de pH. Após essa conversão:
 
 - abaixo de 5,8 = solo muito ácido, pH inadequado
@@ -79,6 +82,8 @@ Representa o pH do solo de forma simulada. Sua leitura analógica será converti
 **Obs.:** A faixa considerada ideal para o tomate será entre 6,2 e 6,8, embora o sistema aceite valores entre 5,8 e 7,2.
 
 ### DHT22
+
+> ### TODO: Adicionar o import da lib do dht22, dht.h
 Representa a umidade do solo na simulação. Os valores serão interpretados da seguinte forma:
 
 - abaixo de 40% = umidade baixa, solo seco, condição elegível para irrigação
@@ -91,5 +96,15 @@ Representa a bomba de irrigação e será ativado apenas quando todas as condiç
 - a umidade estiver abaixo de 40%;
 - o pH estiver na faixa aceitável de 5,8 a 7,2;
 - pelo menos 2 dos 3 nutrientes, N, P e K, estiverem adequados.
+
+> VCC: pino que recebe 5V de alimentação para energizar o módulo do relé.
+> GND: pino Ground ou negativo, que fecha o circuito da energização do módulo. O relé precisa do positivo e do negativo para funcionar.
+> IN: é o pino que recebe o comando de LIGA/DESLIGA do relé. Quem envia esse comando é o ESP32, e por meio do seu código-fonte, do seu algoritmo, decide a hora de LIGAR ou de DESLIGAR a caixinha azul.
+
+> E também possui três pinos azuis (NO, COM e NC), conforme essa descrição:
+
+> NO: Normally Open, isso significa que esse pino está nativamente aberto, isto é, a corrente elétrica não passa por ele enquanto ele estiver no estado DESLIGADO porque está fisicamente como um interruptor aberto.
+> COM: Common, ou seja, esse pino é comum entre os pinos NO e NC.
+> NC: Normally Closed, isso significa que esse pino está nativamente fechado, isto é, a corrente elétrica vai passar por ele enquanto ele estiver no estado DESLIGADO, porque está fisicamente com um interruptor fechado.
 
 **Obs.:** Se alguma dessas condições não for atendida, o relé permanecerá desligado.
