@@ -142,7 +142,7 @@ End
 
 ## 8. Wokwi Simulation
 
-[Wokwi Project](COLE_AQUI_O_LINK_DO_WOKWI)
+[Wokwi Project](https://wokwi.com/projects/461143183395151873)
 
 ---
 
