@@ -1,6 +1,7 @@
+import os
 import requests
 
-API_KEY = "9283d5e1c01f51fe78b0c5698542fdae"
+API_KEY = os.environ["OPENWEATHER_API_KEY"]
 CIDADE = "Sao Paulo,BR"
 
 URL = f"http://api.openweathermap.org/data/2.5/weather?q={CIDADE}&appid={API_KEY}&units=metric&lang=pt_br"
