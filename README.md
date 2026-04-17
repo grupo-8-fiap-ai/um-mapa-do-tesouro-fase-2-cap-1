@@ -150,7 +150,7 @@ End
 
 The ESP32 source code should be available in the repository in the file:
 
-`src/smart_irrigation_tomato.ino`
+`src/sketch.ino`
 
 ---
 
@@ -172,7 +172,7 @@ This repository may also include optional files related to:
 ## 12. Repository Structure
 
 - `README.md`
-- `codigo/smart_irrigation_tomato.ino`
+- `src/sketch.ino`
 - `imagens/circuito-wokwi.png`
 - `imagens/teste-irrigacao-acionada.png`
 - `imagens/teste-ph-inadequado.png`
