@@ -103,8 +103,13 @@ ESP32 sketch: [`src/sketch.ino`](src/sketch.ino)
 
 ---
 
-## 9. Circuit Diagram
-Images: [`print-circuito.png`](print-circuito.png)
+## 9. Circuit Images and Test Evidence
+
+All circuit screenshots and visual test evidence for this project are stored in the following folder:
+
+[`docs/images/`](docs/images/)
+
+This folder contains the Wokwi circuit image and the screenshots used to validate the main irrigation scenarios.
 
 ## 10. Group Members
 
