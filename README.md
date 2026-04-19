@@ -104,7 +104,7 @@ ESP32 sketch: [`src/sketch.ino`](src/sketch.ino)
 ---
 
 ## 9. Circuit Diagram
-Images: [`circuit-wokwi.png`](print circuito.png)
+Images: [`print-circuito.png`](print-circuito.png)
 
 ## 10. Group Members
 
