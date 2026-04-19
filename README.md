@@ -87,7 +87,7 @@ Thresholds are defined as macros at the top of the file
 
 ## 6. Wokwi Simulation
 
-[Wokwi Project](https://wokwi.com/projects/461143183395151873)
+[Wokwi Project](https://wokwi.com/projects/461118638641414145)
 
 ---
 
@@ -103,7 +103,10 @@ ESP32 sketch: [`src/sketch.ino`](src/sketch.ino)
 
 ---
 
-## 9. Group Members
+## 9. Circuit Diagram
+Images: [`circuit-wokwi.png`](circuit-wokwi.png)
+
+## 10. Group Members
 
 - Lucas Carvalho Cordeiro
 - Abner Henrique Dias Rosa Sanches
