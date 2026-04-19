@@ -10,49 +10,201 @@
       "left": -408.23,
       "attrs": {}
     },
-    { "type": "wokwi-dht22", "id": "dht1", "top": -86.1, "left": -130.2, "attrs": {} },
-    { "type": "wokwi-photoresistor-sensor", "id": "ldr2", "top": 41.6, "left": -796, "attrs": {} },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -86.1,
+      "left": -130.2,
+      "attrs": {
+        "humidity": "19.5"
+      }
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr2",
+      "top": 41.6,
+      "left": -796,
+      "attrs": {}
+    },
     {
       "type": "wokwi-pushbutton-6mm",
       "id": "btn1",
       "top": 151.4,
       "left": -518.4,
-      "attrs": { "color": "green", "xray": "1" }
+      "attrs": {
+        "color": "green",
+        "xray": "1"
+      }
     },
     {
       "type": "wokwi-pushbutton-6mm",
       "id": "btn2",
-      "top": 180.2,
-      "left": -470.4,
-      "attrs": { "color": "green", "xray": "1" }
+      "top": 199.4,
+      "left": -518.4,
+      "attrs": {
+        "color": "green",
+        "xray": "1"
+      }
     },
     {
       "type": "wokwi-pushbutton-6mm",
       "id": "btn3",
-      "top": 257,
-      "left": -480,
-      "attrs": { "color": "green", "xray": "1" }
+      "top": 276.2,
+      "left": -518.4,
+      "attrs": {
+        "color": "green",
+        "xray": "1"
+      }
     },
-    { "type": "wokwi-relay-module", "id": "relay1", "top": 307.4, "left": 124.8, "attrs": {} }
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay1",
+      "top": 307.4,
+      "left": -48,
+      "attrs": {}
+    }
   ],
   "connections": [
-    [ "esp:TX", "$serialMonitor:RX", "", [] ],
-    [ "esp:RX", "$serialMonitor:TX", "", [] ],
-    [ "esp:GND.3", "dht1:GND", "black", [ "h0" ] ],
-    [ "dht1:VCC", "esp:3V3.1", "red", [ "h-230.35" ] ],
-    [ "dht1:SDA", "esp:42", "green", [ "v0" ] ],
-    [ "esp:GND.3", "relay1:GND", "black", [ "v76.8", "h441.6" ] ],
-    [ "relay1:VCC", "esp:5V", "red", [ "h0" ] ],
-    [ "ldr2:VCC", "esp:3V3.1", "red", [ "h0" ] ],
-    [ "ldr2:GND", "esp:GND.1", "black", [ "h0" ] ],
-    [ "btn3:1.r", "esp:14", "green", [ "h48.85" ] ],
-    [ "btn2:1.r", "esp:13", "green", [ "h10.4", "v57.6" ] ],
-    [ "btn2:2.r", "esp:GND.1", "black", [ "h-8.8", "v48.4", "h48.05" ] ],
-    [ "btn3:2.r", "esp:GND.1", "black", [ "h0" ] ],
-    [ "btn1:1.r", "esp:12", "green", [ "v9.6", "h39.25" ] ],
-    [ "btn1:2.r", "esp:GND.1", "black", [ "h0.8", "v134.8", "h86.45" ] ],
-    [ "ldr2:AO", "esp:4", "blue", [ "h0" ] ],
-    [ "esp:16", "relay1:IN", "green", [ "v230.4", "h527.95" ] ]
+    [
+      "esp:TX",
+      "$serialMonitor:RX",
+      "",
+      []
+    ],
+    [
+      "esp:RX",
+      "$serialMonitor:TX",
+      "",
+      []
+    ],
+    [
+      "esp:GND.3",
+      "dht1:GND",
+      "black",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "dht1:VCC",
+      "esp:3V3.1",
+      "red",
+      [
+        "h-230.35"
+      ]
+    ],
+    [
+      "dht1:SDA",
+      "esp:42",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "esp:GND.3",
+      "relay1:GND",
+      "black",
+      [
+        "v76.8",
+        "h441.6"
+      ]
+    ],
+    [
+      "relay1:VCC",
+      "esp:5V",
+      "red",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "ldr2:VCC",
+      "esp:3V3.1",
+      "red",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "ldr2:GND",
+      "esp:GND.1",
+      "black",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "btn3:1.r",
+      "esp:14",
+      "green",
+      [
+        "h48.85"
+      ]
+    ],
+    [
+      "btn2:1.r",
+      "esp:13",
+      "green",
+      [
+        "h10.4",
+        "v57.6"
+      ]
+    ],
+    [
+      "btn2:2.r",
+      "esp:GND.1",
+      "black",
+      [
+        "h-8.8",
+        "v48.4",
+        "h48.05"
+      ]
+    ],
+    [
+      "btn3:2.r",
+      "esp:GND.1",
+      "black",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "btn1:1.r",
+      "esp:12",
+      "green",
+      [
+        "v9.6",
+        "h39.25"
+      ]
+    ],
+    [
+      "btn1:2.r",
+      "esp:GND.1",
+      "black",
+      [
+        "h0.8",
+        "v134.8",
+        "h86.45"
+      ]
+    ],
+    [
+      "ldr2:AO",
+      "esp:4",
+      "blue",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "esp:16",
+      "relay1:IN",
+      "green",
+      [
+        "v230.4",
+        "h527.95"
+      ]
+    ]
   ],
   "dependencies": {}
 }
